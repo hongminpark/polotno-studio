@@ -8,7 +8,7 @@ import { ZoomButtons } from 'polotno/toolbar/zoom-buttons';
 import { SidePanel, DEFAULT_SECTIONS } from 'polotno/side-panel';
 import { Workspace } from 'polotno/canvas/workspace';
 import { PagesTimeline } from 'polotno/pages-timeline';
-import { setTranslations } from 'polotno/config';
+import { setTranslations, setTransformerStyle, setHighlighterStyle } from 'polotno/config';
 
 import { loadFile } from './file';
 
@@ -29,6 +29,17 @@ import ptBr from './translations/pt-br';
 import zhCh from './translations/zh-ch';
 
 import Topbar from './topbar/topbar';
+
+// Apply custom transformer styles
+setTransformerStyle({
+  borderStrokeWidth: 1, // Example: 3 pixels
+  anchorStrokeWidth: 1,
+  anchorSize: 5, // Example: 12 pixels
+});
+
+setHighlighterStyle({
+  strokeWidth: 1,
+})
 
 // load default translations
 setTranslations(en);
@@ -145,7 +156,11 @@ const App = observer(({ store }) => {
           </SidePanelWrap>
           <WorkspaceWrap>
             <Toolbar store={store} />
-            <Workspace store={store} />
+            <Workspace store={store} 
+              backgroundColor="#F5F4F2" 
+              pageBorderColor="transparent"
+              activePageBorderColor="transparent"
+            />
             <ZoomButtons store={store} />
             <PagesTimeline store={store} />
           </WorkspaceWrap>

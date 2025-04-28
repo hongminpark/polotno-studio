@@ -1,0 +1,38 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.bp5-navbar {
+    /* background-color: #E8E7E5 !important;
+    padding: 12px 24px !important;
+    border-radius: 32px !important; */
+    border-radius: 32px !important;
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10) !important;
+}
+
+.bp5-navbar-group {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.bp5-popover-target {
+    padding: 4px !important;
+    color: black !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: 'Inter', sans-serif;
+}
+
+.bp5-button-text .bp5-button.bp5-minimal{
+    font-size: 14px !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500 !important;
+}
+
+.bp5-icon svg path {
+    fill: black !important;
+}

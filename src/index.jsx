@@ -24,7 +24,15 @@ But feel free to use this repository as a reference for your own project and to 
 
 unstable_setAnimationsEnabled(true);
 
-const store = createStore({ key: 'nFA5H9elEytDyPyvKL7T' });
+const store = createStore({ 
+  key: 'nFA5H9elEytDyPyvKL7T',
+  showCredit: false,
+  defaults: {
+    text: {
+      fontFamily: 'Inter',
+    },
+  },
+ });
 window.store = store;
 store.addPage();
 
